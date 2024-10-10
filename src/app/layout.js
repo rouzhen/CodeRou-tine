@@ -1,16 +1,26 @@
 import localFont from "next/font/local";
+import { Silkscreen, Sixtyfour, Raleway } from 'next/font/google';
+import ThemeProvider from './theme_provider'
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+	
+const silkscreen = Silkscreen({
+    weight: '400',
+    subsets: ['latin'],
+    variable: '--font-silkscreen',
+  });
+
+  const sixtyfour= Sixtyfour({
+    weight: '400',
+    subsets: ['latin'],
+    variable: '--font-sixtyfour',
+  });
+
+  const raleway= Raleway({
+    weight: '400',
+    subsets: ['latin'],
+    variable: '--font-raleway',
+  });
 
 export const metadata = {
   title: "Create Next App",
@@ -21,10 +31,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={` ${silkscreen.variable} ${sixtyfour.variable} ${raleway.variable} antialiased`}>
+              <ThemeProvider>{children}</ThemeProvider>    
       </body>
     </html>
   );
 }
+
