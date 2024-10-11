@@ -1,15 +1,16 @@
 import Header from './components/Header.js';
 import Icon from './components/gearicon.js'; // Import your icon component
+import NavItem from './components/NavItem.js'; 
 
 export default function Home() {
   return (
-    <div className="font-silkscreen min-h-screen bg-gray-900 text-white tracking-normal">
+    <div className="font-silkscreen min-h-screen bg-gray-900 text-white tracking-normal sm: px-2, md: px-2, lg:px-2, xl:px-8">
       <header className="flex justify-center items-center p-8">
         <nav>
           <ul className="flex space-x-6">
-            <li><a href="#home" className="hover:underline">Home</a></li>
-            <li><a href="#posts" className="hover:underline">Posts</a></li>
-            <li><a href="#about" className="hover:underline">About</a></li>
+            <NavItem href="/home">Home</NavItem>
+            <NavItem href="/posts">Posts</NavItem>
+            <NavItem href="/about">About</NavItem>
             <li><Icon href="#settings" > Icon </Icon></li>
           </ul>
         </nav>
@@ -35,7 +36,7 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="mt-10">
-          <h2 className="font-raleway mt-4 text-xl font-semibold text-slate-300 text-left">
+          <h2 className="font-raleway mt-4 text-xl font-semibold text-slate-300">
             Hi! I'm
             <span className="underline underline-offset-2 decoration-sky-500 text-white">
               {" "}Rou Zhen
