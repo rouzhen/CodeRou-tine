@@ -1,20 +1,12 @@
-import Header from './components/Header.js';
-import Icon from './components/gearicon.js'; // Import your icon component
-import NavItem from './components/NavItem.js'; 
+import Navbar from './components/NavBar.js'; 
 
 export default function Home() {
   return (
     <div className="font-silkscreen min-h-screen bg-gray-900 text-white tracking-normal sm: px-2, md: px-2, lg:px-2, xl:px-8">
-      <header className="flex justify-center items-center p-8">
-        <nav>
-          <ul className="flex space-x-6">
-            <NavItem href="/home">Home</NavItem>
-            <NavItem href="/posts">Posts</NavItem>
-            <NavItem href="/about">About</NavItem>
-            <li><Icon href="#settings" > Icon </Icon></li>
-          </ul>
-        </nav>
+      <header className="flex justify-center items-center p-4">
+        <Navbar /> {/* Replace the nav element with the Navbar component */}
       </header>
+
 
       <div className="flex justify-center items-center"> 
         <h2 className="font-raleway text-sm"> Click on the space bar to start playing </h2>
@@ -30,12 +22,12 @@ export default function Home() {
         </div>
 
         {/* Heading Section */}
-        <h1 className="text-5xl font-light leading-tight text-center p-4 ">
+        <h1 className="text-5xl font-light leading-tight text-center py-6 ">
           Koo Rou Zhen
         </h1>
 
         {/* About Section */}
-        <section id="about" className="mt-10">
+        <section id="about" className="mt-6">
           <h2 className="font-raleway mt-4 text-xl font-semibold text-slate-300">
             Hi! I'm
             <span className="underline underline-offset-2 decoration-sky-500 text-white">
