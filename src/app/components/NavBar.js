@@ -9,8 +9,8 @@ export default function Navbar() {
     };
 
     return (
-        <header className="bg-gray-900 py-4 px-6">
-            <nav className="flex justify-between items-center max-w-4xl mx-auto">
+        <header className="mt-6 bg-zinc-900 rounded-full p-1">
+            <nav className="flex items-center max-w-2xl mx-auto">
             {/* Menu items */}
             <ul className="flex space-x-4 text-white">
                 {/* Nav Item: Home */}
